@@ -2,10 +2,11 @@ $(window).on('scroll', function() {
 
   var scrollPixel = $(this).scrollTop();
   console.log(scrollPixel);
-  
-  $('.hamburger').on('click', function () {
-  $('.nav-bar').css({'display':'inline'});
-  });
+
+  // $('.hamburger').on('hover', function () {
+  // $('.hamburger').css({'background-color':'red'});
+  // $('.nav-bar ul').css({'display':'inline'});
+  // });
 
   $('.title').css({
     'transform':'translateY('+ scrollPixel / 4 + '%)'
@@ -15,11 +16,11 @@ $(window).on('scroll', function() {
   $('nav').css({'background-color':'transparent'});
   }
 
-  if(scrollPixel > 100){
+  if(scrollPixel > 75){
   $('nav').css({'background-color':'#444'});
   }
 
-  if(scrollPixel <= 100){
+  if(scrollPixel <= 75){
   $('nav').css({'background-color':'transparent'});
   }
 
@@ -45,4 +46,12 @@ $(window).on('scroll', function() {
 
 
 ////////end/////////
+});
+
+$('a.sect').bind('click', function(event) {
+    var $anchor = $(this);
+    $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top - 50)
+    }, 1250, 'easeInOutExpo');
+    event.preventDefault();
 });
