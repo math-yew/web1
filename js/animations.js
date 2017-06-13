@@ -1,45 +1,48 @@
 $(window).on('scroll', function() {
-  var magic = $(this).scrollTop();
-  console.log(magic);
 
-  var shooting = .1*Math.abs(500-magic);
-
-  // $('.slide').css({
-  //   'transform':'translateX(50%)'
-  // });
-
-  $('.star').css({
-    'transform': 'translateY(' + .25*magic + '%) translateX(-' + shooting + '%)'
+  var scrollPixel = $(this).scrollTop();
+  console.log(scrollPixel);
+  
+  $('.hamburger').on('click', function () {
+  $('.nav-bar').css({'display':'inline'});
   });
 
   $('.title').css({
-    'transform':'translateY('+ magic / 4 + '%)'
+    'transform':'translateY('+ scrollPixel / 4 + '%)'
   });
 
-  if(magic > 200){
+  if(scrollPixel <= 100){
+  $('nav').css({'background-color':'transparent'});
+  }
+
+  if(scrollPixel > 100){
+  $('nav').css({'background-color':'#444'});
+  }
+
+  if(scrollPixel <= 100){
+  $('nav').css({'background-color':'transparent'});
+  }
+
+  if(scrollPixel > 200){
     console.log('fade in: ');
   $('.fade1').css({'opacity':'1'});
   }
 
-  if(magic > 1000){
+  if(scrollPixel > 1000){
   $('.fade1').css({'opacity':'1'});
   }
 
-  if(magic > 1100){
+  if(scrollPixel > 1100){
   $('.slide').css({
     'transform':'translate(0%, 0%)'
   });
 }
 
 
-  if(magic > 1250){
+  if(scrollPixel > 1250){
   $('.fade2').css({'opacity':'1'});
   }
 
 
-
-
-    $('.headline').css({
-    'transform': 'translate(+' + magic / 8 + '%) rotateY('+magic+'deg)'
-  });
+////////end/////////
 });

@@ -8,15 +8,19 @@
   </head>
   <body>
     <header>
-      <div class="nav">
-      <ul>
-        <li class="home"><a href="#">Home</a></li>
-        <li class="tutorials"><a class="active" href="#">Tutorials</a></li>
-        <li class="about"><a href="#">About</a></li>
-        <li class="news"><a href="#">Newsletter</a></li>
-        <li class="contact"><a href="#">Contact</a></li>
-      </ul>
-    </div>
+      <nav>
+        <div class="nav-bar">
+        <ul>
+          <li class="home"><a href="#">Home</a></li>
+          <li class="directions"><a href="#">Directions</a></li>
+          <li class="about"><a href="#">About</a></li>
+          <li class="news"><a href="#">Newsletter</a></li>
+          <li class="contact"><a href="#">Contact</a></li>
+        </ul>
+        m<img src="./images/hamburger.png" class="hamburger" alt="hamburger icon">m
+      </div>
+      </nav>
+
     </header>
     <main>
       <section class="first" id="first">
@@ -31,7 +35,7 @@
           <div class="center white">
             <h2>Sub topic that gets it's own square</h2>
           </div>
-          <img src="./image/atom2.png" alt="">
+          <img src="./images/atom2.png" alt="">
         </div>
         <div class="half">
           <div class="center fade fade1">
@@ -74,10 +78,10 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <script src="./js/animations.js" charset="utf-8"></script>
+    <script src="./js/bundle.js" charset="utf-8"></script>
     <script src="./js/content.js" charset="utf-8"></script>
     <script>
-      document.getElementById("first").style.backgroundImage = "url(./image/"+firstImage+")";
+      document.getElementById("first").style.backgroundImage = "url(./images/"+firstImage+")";
       document.getElementById("half").appendChild(document.createTextNode(half));
       document.getElementById("paragraph-4").appendChild(document.createTextNode(four));
     </script>
