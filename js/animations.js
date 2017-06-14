@@ -1,7 +1,7 @@
 $(window).on('scroll', function() {
 
   var scrollPixel = $(this).scrollTop();
-  console.log(scrollPixel);
+  // console.log(scrollPixel);
 
   // $('.hamburger').on('hover', function () {
   // $('.hamburger').css({'background-color':'red'});

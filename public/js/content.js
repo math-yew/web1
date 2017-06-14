@@ -1,8 +1,8 @@
 
-var firstImage = "city-1.jpg";
+var firstImage = "carpet-1.jpg";
 
 var lastImage = ""
 
-var half = "Within this paragraph you have the opportunity to describe your website.";
+var half = "Our flooring warehouse has a huge selection of in-stock carpet, vinyl, laminate, hardwood, and tile flooring. Choose from our large selection in-stock or special order that perfect color from our extensive sample racks. At Taylor Carpets we don’t just sell cheap carpet. We sell quality carpet for discount prices. Our carpet prices are the lowest in Utah County.";
 
-var four = "Novatech also provides project management to help pull a project together, champion the project through full coordination with clients' staff, and move the project through to completion and commissioning.";
+var four = "Carpet USA has been in business since 1956. As the oldest flooring store in Provo, we are dedicated to provide you with flooring at a discount.";
