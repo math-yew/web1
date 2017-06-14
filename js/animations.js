@@ -17,7 +17,7 @@ $(window).on('scroll', function() {
   }
 
   if(scrollPixel > 75){
-  $('nav').css({'background-color':'#444'});
+  $('nav').css({'background-color':'#3d2e24'});
   }
 
   if(scrollPixel <= 75){
@@ -33,7 +33,7 @@ $(window).on('scroll', function() {
   $('.fade1').css({'opacity':'1'});
   }
 
-  if(scrollPixel > 1100){
+  if(scrollPixel > 600){
   $('.slide').css({
     'transform':'translate(0%, 0%)'
   });

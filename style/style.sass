@@ -1,6 +1,6 @@
 // $primary: #08419f
 $primary: #8B4513
-$secondary: green
+$secondary: darken(desaturate($primary, 50%),12%)
 
 body
   margin: 0
@@ -16,8 +16,11 @@ h1
 
 h2
   font-size: 30px
-  color: #fff
   margin: 0
+
+section
+  margin: 0
+  overflow: hidden
 
 #first
   width: 100%
@@ -32,6 +35,7 @@ h2
   display: inline-block
   position: relative
   overflow: hidden
+  text-shadow: 2px 2px 12px $primary
 
 .center
   width: 80%
@@ -42,6 +46,9 @@ h2
   transform: translate(-50%,-50%)
   text-align: center
 
+.white
+  color: white
+
 .section-header
   position: relative
   padding: 50px
@@ -49,8 +56,7 @@ h2
 #second
   width: 100%
   height: 80vh
-  background-color: white
-  color: black
+  color: $primary
   font-size: 20px
 
 .half
@@ -58,24 +64,26 @@ h2
   height: 100%
   float: left
   position: relative
-  color: $primary
+  overflow: hidden
 
 .left-half
-  background-color: $primary
+  background: url(".././images/mosaic-1.png") fixed
+  background-color: lighten($secondary, 20%)
   background-size: 50%
   background-attachment: local
-  overflow: hidden
-  color: white
+  background-position: right
+  background-repeat: repeat-y
+  background-size: cover
 
 #third
   width: 100%
   height: 80vh
-  background: url(".././images/plant33.jpg")
+  background: url(".././images/carpet-2.jpeg") fixed
   background-position: center
   background-repeat: no-repeat
   background-size: cover
-  background-attachment:fixed
   color: white
+  z-index: 0
 
 .left-third
   width: calc(100%/3)
@@ -84,59 +92,91 @@ h2
   position: relative
   color: darken($primary, 10%)
 
+.color-1
+  height: 100%
+  width: 100%
+  z-index: 1
+  background-color: white
+  opacity: .6
+
 .middle-third
   width: calc(100%/3)
   height: 100%
-  background-color: desaturate($primary, 50%)
   float: left
   position: relative
+  z-index: 2
+
+.color-2
+  height: 100%
+  width: 100%
+  z-index: 1
+  background-color: desaturate($primary, 50%)
+  opacity: .7
 
 .right-third
   width: calc(100%/3)
   height: 100%
-  background-color: #3b81f6
   float: left
   position: relative
   color: black
 
+.color-3
+  height: 100%
+  width: 100%
+  z-index: 1
+  background-color: lighten($secondary, 50%)
+  opacity: .8
+
 #fourth
   width: 100%
   min-height: 30vh
-  background-color: lightgrey
+  background-color: lighten($secondary, 55%)
   display: inline-block
   position: relative
   font-size: 28px
   position: relative
   overflow: hidden
-  padding: 10px
+  padding: 0px
 
 #fifth
   width: 100%
   height: 80vh
-  background: url(".././images/bluebkgrnd11.jpg")
-  background-position: center
-  background-repeat: no-repeat
-  background-size: cover
-  background-attachment:fixed
   display: inline-block
   margin: 0px
   position: relative
-  color: white
-  // font-size: 25px
+  color: $secondary
 
 #sixth
   width: 100%
   height: 80vh
-  background: url(".././images/bluebkgrnd11.jpg")
+  background: url(".././images/bluebkgrnd11.jpg") fixed
   background-position: center
   background-repeat: no-repeat
   background-size: cover
-  background-attachment:fixed
   display: inline-block
   margin: 0px
   position: relative
   color: white
-  // font-size: 25px
+
+.location
+  width: 100%
+  height: 100%
+  background-color: orange
+
+.location ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+footer
+  width: 100%
+  // height: 80px
+  background-color: $secondary
+  margin: 0
+  padding: 1px
+  text-align: center
+  color: white
+
 
 .light-button
   min-width: 10px
@@ -152,7 +192,7 @@ h2
 
 .light-button:hover
   background-color: white
-  color: #1d3547
+  color: darken($primary, 15%)
 
 .slide
   transform: translateX(150%)
@@ -160,13 +200,16 @@ h2
   transition: 2s
 
 .fade
-  /*display: none*/
   opacity: 0
   transition: 2.5s
 
+.fade2
+  // border: purple thick solid
+  top: 100px
+
 nav
   position: fixed
-  z-index: 1
+  z-index: 5
   background-color: transparent
   width: 100%
   trasition: 1s
@@ -182,26 +225,33 @@ nav
   top: 50%
   transform: translateY(-50%)
   padding: 0 20px
-  font-size: 39px
+  font-size: 32px
   font-family: Times
   text-decoration: none
-  color: lighten($primary, 50%)
+  color: lighten($secondary, 50%)
 
-
+.nav-bar
+  width: 100%
+  position: relative
 
 .nav-bar ul
+  width: 70%
   list-style: none
   text-align: center
   padding: 0
   margin: 0
   transition: 1s
-  // float: left
+  float: right
 
 .nav-bar li
-  font-size: 1.2em
-  line-height: 40px
-  height: 40px
-  border-bottom: 1px solid #888
+  width: 20%
+  border-bottom: none
+  height: 50px
+  line-height: 50px
+  font-size: 1.4em
+  display: inline-block
+  margin-right: -4px
+  padding: 0px
 
 .nav-bar a
   text-decoration: none
@@ -210,11 +260,11 @@ nav
   transition: .7s background-color
 
 .nav-bar a:hover
-  background-color: #115599
+  background-color: $primary
 
 .nav-bar a.active
   background-color: #fff
-  color: #444
+  color: $secondary
   cursor: default
 
 .hamburger
@@ -226,39 +276,37 @@ nav
 
   .hamburger:hover ~ .nav-bar
     display: inline
-    background-color: #444
+    background-color: $secondary
 
   .nav-bar:hover
     display: inline
-    background-color: #444
+    background-color: $secondary
     transition: .5s
 
   .map-container
     margin: 0px
-    padding: 10px
+    padding: 0px
     width: 100%
+    height: 100%
     background-color: green
+    float: left
 
-  .map
-
-
-@media (min-width: 600px)
-
-  .nav-bar li
-    width: 120px
-    border-bottom: none
-    height: 50px
-    line-height: 50px
-    font-size: 1.4em
-    display: inline-block
-    margin-right: -4px
-    // background-color: #444
 
 @media (max-width: 600px)
   .nav-bar
     display: none
     transition: .5s
-    // background-color: #444
+    // background-color: $secondary
+
+  .nav-bar ul
+    width: 100%
+
+  .nav-bar li
+    font-size: 1.2em
+    line-height: 40px
+    height: 40px
+    width: 100%
+    border-bottom: 1px solid #888
 
   .hamburger
     display: inline-block
@@ -275,10 +323,23 @@ nav
 
   .half
     width: 100%
+    height: 40vh
+
+  #third
+    height: 120vh
+
+  .left-third, .middle-third, .right-third
+    height: 40vh
+
+  #fifth
+    height: 120vh
+
+  .map-container
+    height: 100vw
 
   .hamburger:hover ~ .nav-bar
     display: inline
-    background-color: #444
+    background-color: $secondary
 
   .nav-bar:hover
     display: inline
