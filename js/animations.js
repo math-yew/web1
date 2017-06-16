@@ -1,31 +1,23 @@
 $(window).on('scroll', function() {
 
   var scrollPixel = $(this).scrollTop();
-  // console.log(scrollPixel);
-
-  // $('.hamburger').on('hover', function () {
-  // $('.hamburger').css({'background-color':'red'});
-  // $('.nav-bar ul').css({'display':'inline'});
-  // });
+  var screenWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
 
   $('.title').css({
     'transform':'translateY('+ scrollPixel / 4 + '%)'
   });
 
-  if(scrollPixel <= 100){
-  $('nav').css({'background-color':'transparent'});
-  }
-
   if(scrollPixel > 75){
   $('nav').css({'background-color':'#3d2e24'});
   }
 
-  if(scrollPixel <= 75){
+  if(scrollPixel <= 75  && screenWidth > 600){
   $('nav').css({'background-color':'transparent'});
   }
 
   if(scrollPixel > 200){
-    console.log('fade in: ');
   $('.fade1').css({'opacity':'1'});
   }
 

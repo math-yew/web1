@@ -1,0 +1,82 @@
+@import standards.sass
+
+
+@media (max-width: 700px)
+  .nav-bar li
+    width: 17%
+    font-size: 1em
+
+@media (max-width: 600px)
+  nav
+    background-color: $secondary
+
+  .nav-bar
+    display: none
+    transition: .5s
+    // background-color: $secondary
+
+  .nav-bar ul
+    width: 100%
+
+  .nav-bar li
+    font-size: 1.2em
+    line-height: 40px
+    height: 40px
+    width: 100%
+    border-bottom: 1px solid #888
+
+  .hamburger
+    display: inline-block
+
+  .hamburger:hover ~ .nav-bar
+    display: inline
+
+  .nav-bar:hover
+    display: inline
+    transition: .5s
+
+  #second
+    height: 120vh
+
+  .half
+    width: 100%
+
+  .left-half
+    height: 40vh
+
+  .right-half
+    height: 80vh
+
+  #third
+    height: 180vh
+
+  .left-third, .middle-third, .right-third
+    height: 60vh
+    width: 100%
+
+  #fourth
+    height: 70vh
+
+  #fifth
+    height: 120vh
+
+  .hours
+    height: 60vh
+
+  .map-container
+    height: 50vh
+
+  .map-container
+    height: 100vw
+
+  .trans
+    display: none
+
+  .horiz-width
+    width: 320px
+
+  .horiz-center
+    width: 80px
+
+.test
+  color: pink

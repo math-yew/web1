@@ -1,6 +1,4 @@
-// $primary: #08419f
-$primary: #8B4513
-$secondary: darken(desaturate($primary, 50%),12%)
+@import standards.sass
 
 body
   margin: 0
@@ -18,12 +16,13 @@ h2
   font-size: 30px
   margin: 0
 
-section
+section, footer
   margin: 0
   overflow: hidden
 
 .font-2
-  font-family: 'Raleway'
+  // font-family: 'Raleway'
+  font-family: 'Raleway', sans-serif
 
 
 #first
@@ -40,7 +39,7 @@ section
   display: inline-block
   position: relative
   overflow: hidden
-  text-shadow: 2px 2px 12px $primary
+  text-shadow: 2px 2px 20px $secondary
 
 .center
   width: 80%
@@ -53,10 +52,6 @@ section
 
 .white
   color: white
-
-.section-header
-  position: relative
-  padding: 50px
 
 #second
   width: 100%
@@ -165,6 +160,26 @@ section
   position: relative
   color: $secondary
 
+.location
+  width: 100%
+  height: 85%
+
+.location ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+.section-header
+  position: relative
+  height: 15%
+  width: 100%
+
+.map-container
+  margin: 0px
+  padding: 0px
+  height: 100%
+  float: left
+
 #sixth
   width: 100%
   height: 80vh
@@ -185,15 +200,6 @@ section
   background-repeat: no-repeat
   background-size: cover
   opacity: .2
-
-.location
-  width: 100%
-  height: 100%
-
-.location ul
-  list-style: none
-  padding: 0
-  margin: 0
 
 .social
   position: relative
@@ -237,7 +243,6 @@ footer
 
 .slide
   transform: translateX(150%)
-  font-family: serif
   transition: 2s
 
 .fade
@@ -245,7 +250,6 @@ footer
   transition: 2.5s
 
 .fade2
-  top: 100px
 
 nav
   position: fixed
@@ -263,15 +267,15 @@ nav
 .logo
   position: absolute
   display: inline
-  width: 300px
+  width: 200px
   height: 32px
   top: 50%
   transform: translateY(-50%)
-  padding: 0 20px
+  padding: 0 0 0 20px
   font-size: 32px
   font-family: Times
   text-decoration: none
-  color: lighten($secondary, 50%)
+  color: lighten($secondary, 60%)
 
 .nav-bar
   width: 100%
@@ -317,83 +321,14 @@ nav
   padding: 10px
   float: right
 
-  .hamburger:hover ~ .nav-bar
-    display: inline
-    background-color: $secondary
+.hamburger:hover ~ .nav-bar
+  display: inline
+  background-color: $secondary
 
-  .nav-bar:hover
-    display: inline
-    background-color: $secondary
-    transition: .5s
+.nav-bar:hover
+  display: inline
+  background-color: $secondary
+  transition: .5s
 
-  .map-container
-    margin: 0px
-    padding: 0px
-    width: 100%
-    height: 100%
-    background-color: green
-    float: left
 
-@media (max-width: 700px)
-  .nav-bar li
-    width: 17%
-    font-size: 1em
-
-@media (max-width: 600px)
-  .nav-bar
-    display: none
-    transition: .5s
-    // background-color: $secondary
-
-  .nav-bar ul
-    width: 100%
-
-  .nav-bar li
-    font-size: 1.2em
-    line-height: 40px
-    height: 40px
-    width: 100%
-    border-bottom: 1px solid #888
-
-  .hamburger
-    display: inline-block
-
-  #second
-    height: 130vh
-
-  .half
-    width: 100%
-    // height: 80vh
-
-  .left-half
-    height: 40vh
-
-  .right-half
-    // height: 40vh
-
-  #third
-    height: 150vh
-
-  .left-third, .middle-third, .right-third
-    height: 50vh
-    width: 100%
-
-  #fourth
-    height: 70vh
-
-  #fifth
-    height: 120vh
-
-  .map-container
-    height: 100vw
-
-  .trans
-    display: none
-
-  .hamburger:hover ~ .nav-bar
-    display: inline
-    background-color: $secondary
-
-  .nav-bar:hover
-    display: inline
-    transition: .5s
+@import media-queries.sass
