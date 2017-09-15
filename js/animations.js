@@ -5,12 +5,14 @@ $(window).on('scroll', function() {
 || document.documentElement.clientWidth
 || document.body.clientWidth;
 
-  $('.title').css({
-    'transform':'translateY('+ scrollPixel / 4 + '%)'
-  });
+////////////////////////HOME////////////////////////////////
+  // $('.title').css({
+  //   'transform':'translateY('+ scrollPixel / 4 + '%)'
+  // });
 
   if(scrollPixel > 75){
-  $('nav').css({'background-color':'#3d2e24'});
+  // $('nav').css({'background-color':'#24263d'});
+  $('nav').css({'background-color':'#fff'}).css({'opacity':'.85'});
   }
 
   if(scrollPixel <= 75  && screenWidth > 600){
@@ -36,6 +38,15 @@ $(window).on('scroll', function() {
   $('.fade2').css({'opacity':'1'});
   }
 
+////////////////////////SERVICE////////////////////////////////
+
+$('.serv-nitric').css({
+  'transform':'translate('+ scrollPixel/17 + '%,'+ scrollPixel/20 + '%)'+' rotate(-'+ (10+scrollPixel / 25) + 'deg'
+});
+
+////////////////////////PROJECT////////////////////////////////
+
+$('#proj-third').css({'background-color':'rgb('+(255-scrollPixel*.9)+', '+ (255-scrollPixel*.9) +', 255)'});
 
 ////////end/////////
 });

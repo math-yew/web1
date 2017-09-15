@@ -1,32 +1,7 @@
 @import standards.sass
 
-body
-  margin: 0
-  font-family: sans-serif
-
-div
-  margin: 0
-  margin: 0
-
-h1
-  font-size: 70px
-  margin: 0
-
-h2
-  font-size: 30px
-  margin: 0
-
-section, footer
-  margin: 0
-  overflow: hidden
-
-.font-2
-  // font-family: 'Raleway'
-  font-family: 'Raleway', sans-serif
-
-
 #first
-  background: url(".././images/carpet-1.jpg")
+  background: url(".././images/plant1.jpg")
   width: 100%
   height: 80vh
   background-position: center
@@ -67,13 +42,13 @@ section, footer
   overflow: hidden
 
 .left-half
-  background: url(".././images/mosaic-1.png") fixed
+  background: url(".././images/atom2.png")
   background-color: lighten($secondary, 20%)
-  background-size: 50%
+  background-size: 100%
   // background-attachment: local
-  background-position: center
-  background-repeat: repeat
-  background-size: contain
+  background-position: left top
+  background-repeat: no-repeat
+  background-size: auto
 
 .right-half
   height: 100%
@@ -92,7 +67,7 @@ section, footer
 #third
   width: 100%
   height: 80vh
-  background: url(".././images/carpet-2.jpeg") fixed
+  background: url(".././images/plant33.jpg") fixed
   background-position: center
   background-repeat: no-repeat
   background-size: cover
@@ -100,6 +75,7 @@ section, footer
   z-index: 0
 
 .left-third
+  // background: url(".././images/plant33.jpg") fixed
   width: calc(100%/3)
   height: 100%
   float: left
@@ -114,6 +90,10 @@ section, footer
   opacity: .6
 
 .middle-third
+  // background: url(".././images/bridge1.png") fixed
+  background-position: left
+  background-repeat: no-repeat
+  // background-size: contain
   width: calc(100%/3)
   height: 100%
   float: left
@@ -128,6 +108,10 @@ section, footer
   opacity: .7
 
 .right-third
+  // background: url(".././images/instruct3.jpg") fixed
+  background-position:  right
+  background-repeat: no-repeat
+  background-size: contain
   width: calc(100%/3)
   height: 100%
   float: left
@@ -195,7 +179,7 @@ section, footer
 .sixth-image
   width: 100%
   height: 100%
-  background: url(".././images/carpet-3.jpg") fixed
+  background: url(".././images/bluebkgrnd11.jpg") fixed
   background-position: center
   background-repeat: no-repeat
   background-size: cover
@@ -215,32 +199,6 @@ section, footer
   width: 400px
 
 
-footer
-  width: 100%
-  // height: 80px
-  background-color: $secondary
-  margin: 0
-  padding: 1px
-  text-align: center
-  color: white
-
-
-.light-button
-  min-width: 10px
-  margin: 0 auto
-  padding: 5px
-  background-color: transparent
-  border: normal solid white
-  /*border-color: white*/
-  color: white
-  font-size: 30px
-  border-radius: 7px
-  transition: .5s
-
-.light-button:hover
-  background-color: white
-  color: darken($primary, 15%)
-
 .slide
   transform: translateX(150%)
   transition: 2s
@@ -251,84 +209,9 @@ footer
 
 .fade2
 
-nav
-  position: fixed
-  z-index: 5
-  background-color: transparent
-  width: 100%
-  trasition: 1s
-
-.nav-left
-  float: left
-  height: 40px
-  position: relative
-  // width: 200px
-
-.logo
-  position: absolute
-  display: inline
-  width: 200px
-  height: 32px
-  top: 50%
-  transform: translateY(-50%)
-  padding: 0 0 0 20px
-  font-size: 32px
-  font-family: Times
-  text-decoration: none
-  color: lighten($secondary, 60%)
-
-.nav-bar
-  width: 100%
-  position: relative
-
-.nav-bar ul
-  width: 70%
-  list-style: none
-  text-align: center
-  padding: 0
-  margin: 0
-  transition: 1s
-  float: right
-
-.nav-bar li
-  width: 20%
-  border-bottom: none
-  height: 50px
-  line-height: 50px
-  font-size: 1.4em
-  display: inline-block
-  margin-right: -4px
-  padding: 0px
-
-.nav-bar a
-  text-decoration: none
-  color: #fff
-  display: block
-  transition: .7s background-color
-
-.nav-bar a:hover
-  background-color: $primary
-
-.nav-bar a.active
-  background-color: #fff
-  color: $secondary
-  cursor: default
-
-.hamburger
-  height: 20px
-  widows: auto
-  display: none
-  padding: 10px
-  float: right
-
-.hamburger:hover ~ .nav-bar
-  display: inline
-  background-color: $secondary
-
-.nav-bar:hover
-  display: inline
-  background-color: $secondary
-  transition: .5s
-
+@import experience.sass
+@import service.sass
+@import projects.sass
+@import contact.sass
 
 @import media-queries.sass
